@@ -1,0 +1,223 @@
+h1 {
+    font-size: 24px;
+    margin: 0 0 0 1px;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.symbol::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 97px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #FF4D4F;
+}
+
+.required {
+    font-size: 14px;
+    color: #FF4D4F;
+    padding-left: 24px;
+}
+
+.titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 39px;
+    background-color: #EBEEF3;
+    border-radius: 8px 0 0 8px;
+    margin-top: 12px;
+}
+
+.title {
+    width: 130px;
+    list-style: none;
+    color: #B1B4BB;
+}
+
+.line {
+    margin-top: 1rem;
+    border: 1px solid #D7D8DA;
+}
+
+.application-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 0 0 0 1px;
+}
+
+h2 span {
+    color: #5A616A;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+h2 span u {
+    color: #FF4D4F;
+}
+
+select {
+    margin: 0 4px;
+    border: 1px solid #B1B4BB;
+    border-radius: 8px;
+    padding: 10px 12px 10px 12px;
+    font-size: 16px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 1px 8px;
+}
+
+.actions span {
+    color: #5A616A;
+}
+
+.actions select {
+    margin-left: 16px;
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 100px;
+    height: 39px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #2A3958;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px 16px;
+}
+
+table {
+    width: 100%;
+}
+
+thead tr {
+    height: 60px;
+}
+
+tr input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+table th {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 5px 10px 5px;
+    background-color: #EEF0F4;
+}
+
+tbody tr {
+    height: 44px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #F9F9FB;
+}
+
+table td {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-grey {
+    height: 29px;
+    background-color: #EBEEF3;
+    border: 1px solid #D7D8DA;
+    padding: 7px 18px 7px 18px;
+    border-radius: 8px;
+}
+
+.status {
+    padding: 2px 10px 2px 10px;
+    border-radius: 10px;
+
+}
+
+.pending {
+    color: #9A3412;
+    background-color: #FFEDD5;
+}
+
+.failure {
+    color: #991B1B;
+    background-color: #FEE2E2;
+}
+
+.success {
+    color: #166534;
+    background-color: #DCFCE7;
+}
+
+.pagination {
+    background-color: #F1F3F5;
+    padding: 12px 20px 12px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.page-count {
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-pagination {
+    width: 40px;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    border-radius: 4px;
+    background: transparent;
+    color: #9599A1;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-page {
+    width: 40px;
+    height: 40px;
+    color: #A1A1A1;
+    border: none;
+    margin: 0 8px;
+    padding: 16px;
+    border-radius: 4px;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-page.active {
+    color: #FFFFFF;
+    background-color: #2A3958;
+    padding: 8px 12px 8px 12px;
+}
