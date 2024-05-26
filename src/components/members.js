@@ -15,7 +15,7 @@ function Members() {
       temp.push(i);
     }
     setPages(temp);
-  }, []);
+  }, [members]);
 
   const goToFirstPage = () => {
     setPage(1);
