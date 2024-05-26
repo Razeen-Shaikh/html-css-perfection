@@ -62,7 +62,7 @@ function Members() {
       <div className="line"></div>
       <ul className="titles">
         <li className="title">기본정보 관리</li>
-        <li className="title">투자유형 관리</li>
+        <li className="title active">투자유형 관리</li>
         <li className="title">입출금내역 조회</li>
         <li className="title">영업내역 조회</li>
         <li className="title">투자내역 조회</li>
@@ -110,57 +110,72 @@ function Members() {
           <button className="btn">저장</button>
         </div>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>
-              <input type="checkbox" onChange={selectAll} />
-            </th>
-            <th>NO</th>
-            <th>기존유형</th>
-            <th>신청유형</th>
-            <th>제출서류</th>
-            <th>신청일시</th>
-            <th>승인여부</th>
-            <th>승인거부 사유</th>
-            <th>승인일시</th>
-            <th>관리자</th>
-          </tr>
-        </thead>
-        <tbody>
-          {members.map((member) => (
-            <tr key={member.NO}>
-              <td>
-                <input type="checkbox" />
-              </td>
-              <td>{member.NO}</td>
-              <td>{member.기존유형}</td>
-              <td>{member.신청유형}</td>
-              <td>
-                <button className="btn-grey">{member.제출서류}</button>
-              </td>
-              <td>{member.신청일시}</td>
-              <td>
-                <span
-                  className={
-                    "status " +
-                    (member.승인여부 === "승인대기"
-                      ? "pending"
-                      : member.승인여부 === "승인거부"
-                      ? "failure"
-                      : "success")
-                  }
-                >
-                  {member.승인여부}
-                </span>
-              </td>
-              <td>{member["승인거부 사유"]}</td>
-              <td>{member.승인일시}</td>
-              <td>{member.관리자}</td>
+      <div className="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <label className="container">
+                  <input type="checkbox" onChange={selectAll} />
+                  <span className="checkmark"></span>
+                </label>
+              </th>
+              <th>NO</th>
+              <th>기존유형</th>
+              <th>신청유형</th>
+              <th>제출서류</th>
+              <th>신청일시</th>
+              <th>승인여부</th>
+              <th>승인거부 사유</th>
+              <th>승인일시</th>
+              <th>관리자</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {members.length > 0 ? (
+              members.map((member) => (
+                <tr key={member.NO}>
+                  <td>
+                    {/* <input type="checkbox" /> */}
+                    <label class="container">
+                      <input type="checkbox" />
+                      <span className="checkmark"></span>
+                    </label>
+                  </td>
+                  <td>{member.NO}</td>
+                  <td>{member.기존유형}</td>
+                  <td>{member.신청유형}</td>
+                  <td>
+                    <button className="btn-grey">{member.제출서류}</button>
+                  </td>
+                  <td>{member.신청일시}</td>
+                  <td>
+                    <span
+                      className={
+                        "status " +
+                        (member.승인여부 === "승인대기"
+                          ? "pending"
+                          : member.승인여부 === "승인거부"
+                          ? "failure"
+                          : "success")
+                      }
+                    >
+                      {member.승인여부}
+                    </span>
+                  </td>
+                  <td>{member["승인거부 사유"]}</td>
+                  <td>{member.승인일시}</td>
+                  <td>{member.관리자}</td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td className="no-data">조회 결과가 없습니다.</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
       <div className="pagination">
         <div className="page-count">
           {" "}
